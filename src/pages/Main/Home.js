@@ -3,7 +3,6 @@ import ProductCard from "../../components/ProductCard";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then((res) => res.json())
@@ -11,7 +10,7 @@ const Home = () => {
   }, []);
 
   const activeClass = "text-white  bg-indigo-500 border-white";
-
+  console.log('click')
   return (
     <div className='max-w-7xl gap-14 mx-auto my-10'>
       <div className='mb-10 flex justify-end gap-5'>
